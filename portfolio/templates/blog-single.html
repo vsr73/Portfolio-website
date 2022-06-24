@@ -111,22 +111,22 @@
           <div class="col-md-8">
             <div class="post-box">
               <div class="post-thumb">
-                <img src="{{blog.pic.url}}" class="img-fluid" alt="" width="600" height="800">
+                <img src="{{blog.pic.url}}" class="" alt="" style=" max-width: 100%;  max-height: 100%;">
               </div>
               <div class="post-meta">
                 <h1 class="article-title">{{blog.subject}}</h1>
                 <ul>
                   <li>
                     <span class="bi bi-person"></span>
-                    <a href="#">Jason London</a>
+                    <a href="#">{{blog.host.name}}</a>
                   </li>
                   <li>
                     <span class="bi bi-tag"></span>
-                    <a href="#">Web Design</a>
+                    <a href="#">{{blog.category}}</a>
                   </li>
                   <li>
                     <span class="bi bi-chat-left-text"></span>
-                    <a href="#">14</a>
+                    <a href="#">{{comments.count}}</a>
                   </li>
                 </ul>
               </div>
@@ -206,25 +206,22 @@
                       <input type="email" class="form-control input-mf" id="inputEmail1" placeholder="Email *" name="email" required>
                     </div>
                   </div>
+                  
                   <div class="col-md-12 mb-3">
                     <div class="form-group">
-                      <input type="url" class="form-control input-mf" id="inputUrl" placeholder="Website">
-                    </div>
-                  </div>
-                  <div class="col-md-12 mb-3">
-                    <div class="form-group">
-                      <textarea id="textMessage" class="form-control input-mf" placeholder="Comment *" name="message" cols="45" rows="8" required></textarea>
+                      <textarea id="textMessage" class="form-control input-mf" placeholder="Comment *" name="message" rows="4" required></textarea>
                     </div>
                   </div>
                   <div>
                     <input type="file" name="dp" placeholder="upload display pic" alt="avatar.svg">
                   </div>
                   <div class="col-md-12">
-                    <button type="submit" class="button button-a button-big button-rouded">Send Message</button>
+                    <button type="submit" class="button button-a button-big button-rouded">comment</button>
                   </div>
                  
                 </div>
               </form>
+
             </div>
           </div>
           <!--

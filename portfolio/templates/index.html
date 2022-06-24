@@ -89,7 +89,7 @@
           <!--<p class="display-6 color-d">Hello, world!</p>-->
           <h1 class="hero-title mb-4">I am  {{user.name}}</h1>
           {% for skill in skills %}
-          <p class="hero-subtitle"><span class="typed" data-typed-items="{{skill.skill}},"></span></p>
+          <p class="hero-subtitle"><span class="typed" data-typed-items="{{skill.skill}},{{skill.skill1}},{{skill.skill2}},{{skill.skill3}},"></span></p>
           <!-- <p class="pt-3"><a class="btn btn-primary btn js-scroll px-4" href="#about" role="button">Learn More</a></p> -->
           {% endfor %}
         </div>
@@ -399,9 +399,9 @@
           <div class="col-md-4">
             <div class="card card-blog">
               <div class="card-img">
-                <a href="{% url 'blogs' blog.id %}">
+                <a href="{% url 'blogs' blog.id %}"> 
                   <!--class="img-fluid"-->
-                  <img src="{{blog.pic.url}}" alt="" class="img-fluid" style="height: 350px; width:353.99px"></a> 
+                  <img src="{{blog.pic.url}}" alt="" class="img-fluid" ></a> 
               </div>
               <div class="card-body">
                 <div class="card-category-box">
@@ -411,7 +411,7 @@
                 </div>
                 <h3 class="card-title"><a href="{% url 'blogs' blog.id %}">See more ideas about {{blog.category}}</a></h3>
                 <p class="card-description">
-                 {{blog.description}}
+                 {{blog.subject}}
                 </p>
               </div>
               <div class="card-footer">

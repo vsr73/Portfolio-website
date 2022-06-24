@@ -9,7 +9,7 @@ def home(request):
     s=skills.objects.filter(host_id = 1)
     cdlangs=coding_languages.objects.filter(host_id = 1)
     servics=services.objects.filter(host_id=1)
-    blogs=blog.objects.filter(host_id=1)
+    blogs=blog.objects.filter(host_id=1).order_by('subject')
     prjcts=projects.objects.filter(host_id=1)
     dict={'user':user1,'skills':s,'coding_languages':cdlangs,'servics':servics,'blogs':blogs,'projects':prjcts}
     if request.method=='POST':

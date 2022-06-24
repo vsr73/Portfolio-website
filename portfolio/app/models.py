@@ -20,6 +20,9 @@ class user(models.Model):
 class skills(models.Model):
     host=models.ForeignKey(user,on_delete=models.CASCADE)
     skill=models.CharField(max_length=150)
+    skill2=models.CharField(max_length=150,blank=True)
+    skill3=models.CharField(max_length=150,blank=True)
+    skill4=models.CharField(max_length=150,blank=True)
     def __str__(self):
         return self.skill
 
